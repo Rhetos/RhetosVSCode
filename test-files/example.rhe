@@ -1,0 +1,19 @@
+module Common
+{
+    ENTITY AutoCodeCache
+    "
+        SELECT 'fasdf asdf asdf asdf' FROM pero
+    "
+    {
+        ShortString Entity { SqlNotNull "SELECT 'fasdf asdf asdf asdf' FROM pero"; }
+        ShortString Entity { SqlNotNull 'SELECT ''fasdf asdf asdf asdf'' FROM pero'; }
+        ShortString Property { SqlNotNull "foreach (int ''xxx'' in query())"; } ShortString Property;
+        ShortString Property { SqlNotNull 'foreach (int xxx in query()) print "x"; foreach ()'; } ShortString Property;
+        Integer Integer { SqlNotNull "0"; }
+        
+        UniqueMultiple 'Entity Property Grouping Prefix' { Clustered; }
+    }
+    
+    //SqlProcedure AutoCodeCacheGetNext <AutoCodeCacheGetNext param.sql> <AutoCodeCacheGetNext body.sql>;
+    SqlProcedure AutoCodeCacheUpdate <AutoCodeCacheUpdate param.sql> <AutoCodeCacheUpdate body.sql>;
+}

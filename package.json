@@ -1,0 +1,26 @@
+{
+    "name": "rhetos-dsl",
+    "displayName": "Rhetos DSL",
+    "description": "Syntax highlighting for Rhetos DSL scripts (http://rhetos.org)",
+    "version": "0.0.1",
+    "publisher": "bantolov",
+    "engines": {
+        "vscode": "^1.19.0"
+    },
+    "categories": [
+        "Languages"
+    ],
+    "contributes": {
+        "languages": [{
+            "id": "rhetos",
+            "aliases": ["Rhetos", "rhetos"],
+            "extensions": [".rhe",".alpha"],
+            "configuration": "./language-configuration.json"
+        }],
+        "grammars": [{
+            "language": "rhetos",
+            "scopeName": "source.rhetos",
+            "path": "./syntaxes/Rhetos.tmLanguage.json"
+        }]
+    }
+}
