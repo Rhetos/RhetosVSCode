@@ -38,28 +38,21 @@
 					]
 				},
 				{
-					"match": "'(.*)'",
-					"captures": {
-						"1": {
-							"patterns": [
-								{
-									"include": "#rhetos_cs"
-								}
-							]
+					"begin": "'",
+					"end": "'",
+					"patterns": [
+						{
+							"include": "$self"
+						},
+						{
+							"include": "source.cs"
 						}
-					}
+					]
 				},
 				{
 					"begin": "<",
 					"end": ">",
 					"name": "variable"
-				}
-			]
-		},
-		"rhetos_cs": {
-			"patterns": [
-				{
-					"include": "source.cs"
 				}
 			]
 		},
