@@ -1,7 +1,7 @@
 {
     "name": "rhetos-dsl",
     "displayName": "Rhetos DSL",
-    "description": "Syntax highlighting for Rhetos DSL scripts (http://rhetos.org)",
+    "description": "Syntax highlighting for Rhetos DSL scripts (https://github.com/Rhetos/Rhetos)",
     "version": "0.0.1",
     "publisher": "bantolov",
     "engines": {
